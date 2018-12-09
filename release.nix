@@ -1,1 +1,5 @@
-{ nixpkgs }: { hello = nixpkgs.hello; }
+{ ... }@args:
+let
+  pkgs = import <nixpkgs> args;
+in
+{ hello = pkgs.hello; }
